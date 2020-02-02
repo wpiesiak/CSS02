@@ -1,0 +1,4 @@
+.idea
+*.css
+*.css.map
+sass/.sass-cache
