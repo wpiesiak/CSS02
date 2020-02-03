@@ -1,11 +1,76 @@
 .fly_with_us
   color: $white
+  padding: 3rem
 
-.content_title--underscore
+
+.content_title--underline
   width: 100%
+  line-height: 3rem
+  border-bottom: 3px solid $primary
+  font-weight: normal
   text-transform: uppercase
-  &:after
+  .underline
+    display: inline-block
+    &::after
+      content: ' '
+      display: block
+      width: 100%
+      height: 3px
+      background-color: $white
+      position: relative
+      bottom: -3px
+
+
+.header-main
+  font-size: 8rem
+  line-height: 1rem
+
+.header-subtitle
+  font-size: 2rem
+
+.extra_info
+  font-size: 1.5rem
+  border-left: 3px solid $white
+  font-weight: lighter
+  padding-left: 1.5rem
+
+.button__confirm
+  background-color: $primary
+  color: $white
+
+.button__arrow
+  color: $secondary
+  .im
+    font-size: 1rem
+    font-weight: lighter
+
+.flight_search__container
+  margin: 7rem 0
+  height: 6rem
+  color: $gray
+  width: 100%
+  display: flex
+  align-items: stretch
+  justify-content: center
 
 
 
+.flight_search__plane_icon
+  width: 6rem
+  height: 6rem
+  display: flex
+  align-items: center
+  justify-content: center
+  background-color: $light80
+  //flex: 6rem
 
+  .im-plane
+    transform: rotate(-45deg)
+    font-size: 2.5rem
+
+
+.flight_search__from, .flex_search__to
+  flex: 2 2 auto
+
+.flex_search__button
+  flex: 1 1 auto
