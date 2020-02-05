@@ -4,13 +4,30 @@
   display: flex
   justify-content: space-between
 
-.header--right
+.header--right, .header--left
   display: flex
   justify-content: space-between
+  align-items: center
   *
     margin: 0 .5rem
   .link
     color: $white
     text-decoration: none
+    font-size: .9rem
+    font-weight: 700
 
 
+.header__checkin_button
+  padding: .5rem 2.5rem
+  border-radius: 8px
+  @include transparentBorder
+
+.avatar__image
+  width: 2.5rem
+  height: 2.5rem
+  border-radius: 50%
+  @include transparentBorder
+
+
+.header__logo
+  height: 2.5rem

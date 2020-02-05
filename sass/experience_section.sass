@@ -1,0 +1,82 @@
+.experience
+  display: flex
+  flex-direction: column
+  @include mainSection
+  @media (min-width: $desktop-min)
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+
+.experience__element_container
+  @media (min-width: $desktop-min)
+    width: 32%
+
+.card
+  background: $white
+  box-shadow: -9px 10px 30px -17px $gray
+  &:hover
+    box-shadow: -9px 10px 30px -17px $secondary
+
+
+.card__image
+  width: 100%
+  @media (max-width: $mobile-max)
+    height: 250px
+
+.card__footer
+  padding: .3rem 2rem
+  .card__label
+    display: inline-block
+    color: $gray
+    text-transform: uppercase
+    border-bottom: 2px solid $gray
+    font-size: .8rem
+    @include cardFooterElement
+  .card__title
+    font-size: 1.3rem
+    font-weight: 700
+    @include cardFooterElement
+
+
+
+.experience__content
+  padding-right: 2rem
+  .experience__title
+    font-size: 3.4rem
+  .experience__subtitle
+    color: $gray
+    font-size: 1.3rem
+    font-weight: lighter
+    padding-bottom: 2.5rem
+    border-bottom: 1px solid $gray
+    line-height: 2rem
+  .experience__content__footer
+    display: flex
+    align-items: center
+    color: $gray
+    font-weight: lighter
+
+  .play_icon
+    width: 3rem
+    height: 3rem
+    background-color: $secondary
+    border-radius: 50%
+    border: 0
+    color: $white
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-right: 1rem
+
+
+
+
+
+.card__AR
+  position: relative
+
+.card__economy
+  position: relative
+  top: 2rem
+  left: 1.5rem
+

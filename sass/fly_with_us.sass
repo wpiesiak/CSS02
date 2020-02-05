@@ -1,6 +1,6 @@
 .fly_with_us
   color: $white
-  padding: 3rem
+  @include mainSection
 
 
 .content_title--underline
@@ -58,9 +58,6 @@
 .flight_search__plane_icon
   width: 6rem
   height: 6rem
-  display: flex
-  align-items: center
-  justify-content: center
   background-color: $light80
   //flex: 6rem
 
@@ -68,9 +65,21 @@
     transform: rotate(-45deg)
     font-size: 2.5rem
 
+.flight_search__element
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
 
-.flight_search__from, .flex_search__to
-  flex: 2 2 auto
 
-.flex_search__button
-  flex: 1 1 auto
+.flight_search__from, .flight_search__to
+  flex: 1 0 calc((100% - 6rem - 20%)/2)
+  background-color: $white
+  position: relative
+
+.flight_search__button
+  flex: 1 0 20%
+  background-color: $secondary
+  font-size: 1.5rem
+  font-weight: bold
+  color: $white

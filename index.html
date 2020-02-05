@@ -21,7 +21,12 @@
 <!-- Header -->
 <header class="header">
     <div class="header--left">
-        <div class="header__logo_container">Zabdos</div>
+        <div class="header__logo_container">
+            <img src="./assets/logo.png" alt="Zabdos logo" class="header__logo"/>
+        </div>
+        <div class="header__name_container">
+            Zabdos
+        </div>
     </div>
     <div class="header--right">
         <div class="header__flight_status_container">
@@ -30,8 +35,14 @@
         <div class="header__checkin_container">
             <a href="#" class="header__checkin_button link">Check In</a>
         </div>
-        <div class="header__avatar"></div>
-        <div class="header__menu"></div>
+        <div class="header__avatar">
+            <img src="./assets/avatar.jpg" alt="avatar" class="avatar__image" />
+        </div>
+        <div class="header__menu">
+            <a href="#" class="link">
+                <i class="im im-menu"></i>
+            </a>
+        </div>
     </div>
 </header>
 
@@ -52,22 +63,28 @@
         </div>
     </div>
     <div class="flight_search__container button_group">
-        <div class="flight_search__plane_icon">
+        <div class="flight_search__plane_icon flight_search__element">
             <i class="im im-plane"></i>
         </div>
-        <div class="flight_search__from">
-            <label for="departure_airport">Departure airport</label>
-            <select name="departure_airport" id="departure_airport">
-                <option>Mumbai (BOM)</option>
-            </select>
+        <div class="flight_search__from flight_search__element">
+            <label for="departure_airport" class="label-custom">Departure airport</label>
+            <div class="select__container">
+                <select name="departure_airport" id="departure_airport" class="select-custom">
+                    <option>Mumbai (BOM)</option>
+                    <option>New York (NY)</option>
+                    <option>Los Angeles (LA)</option>
+                </select>
+            </div>
         </div>
-        <div class="flight_search__to">
-            <label for="arrival_airport">Arrival airport</label>
-            <select name="arrival_airport" id="arrival_airport">
-                <option>Aaalborg (AAL)</option>
-            </select>
+        <div class="flight_search__to flight_search__element">
+            <label for="arrival_airport" class="label-custom">Arrival airport</label>
+            <div class="select__container">
+                <select name="arrival_airport" id="arrival_airport" class="select-custom">
+                    <option>Aaalborg (AAL)</option>
+                </select>
+            </div>
         </div>
-        <div class="flight_search__button">
+        <div class="flight_search__button flight_search__element">
             Search
         </div>
     </div>
@@ -77,33 +94,48 @@
 <!-- The zabdos experience -->
 
 <section class="experience" id="zabdos_experience">
-    <div class="experience__content">
-        <h1 class="experience__title">
-            The Zabdos Experience
-        </h1>
-        <h3 class="experience__subtitle">
-            Whether it's your first flight or simply your lates, we work to anticipate your every need
-        </h3>
-        <hr class="line--subtle"/>
-        <div class="experience__content__footer">
-            <div class="play-icon"></div>
-            <span>Watch full video now!</span>
+    <div class="experience__element_container">
+        <div class="experience__content">
+            <h1 class="experience__title">
+                The Zabdos Experience
+            </h1>
+            <h3 class="experience__subtitle">
+                Whether it's your first flight or simply your lates, we work to anticipate your every need
+            </h3>
+            <div class="experience__content__footer">
+                <div class="play_icon">
+                    <i class="im im-play"></i>
+                </div>
+                <span>Watch full video now!</span>
+            </div>
         </div>
     </div>
 
-    <div class="card card__business">
-        <img class="card__image"/>
-        <div class="card__footer">
-            <div class="card__label">Arrive inspired</div>
-            <div class="card__title">Business Class</div>
+    <div class="experience__element_container">
+        <div class="card card__business">
+            <img class="card__image" src="assets/business.png"/>
+            <div class="card__footer">
+                <div class="card__label">Arrive inspired</div>
+                <div class="card__title">Business Class</div>
+            </div>
+        </div>
+
+        <div class="card card__economy">
+            <img class="card__image" src="assets/economy.png"/>
+            <div class="card__footer">
+                <div class="card__label">Expect the exceptional</div>
+                <div class="card__title">Economy Class</div>
+            </div>
         </div>
     </div>
 
-    <div class="card card__economy">
-        <img class="card__image"/>
-        <div class="card__footer">
-            <div class="card__label">Expect the exceptional</div>
-            <div class="card__title">Economy Class</div>
+    <div class="experience__element_container">
+        <div class="card card__AR">
+            <img class="card__image" src="assets/vr.png"/>
+            <div class="card__footer">
+                <div class="card__label">Award winning technology</div>
+                <div class="card__title">Explore the Fleet in AR</div>
+            </div>
         </div>
     </div>
 </section>
