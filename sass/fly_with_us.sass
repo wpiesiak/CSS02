@@ -1,25 +1,24 @@
-.fly_with_us
+.fly-with-us
+  +mainSection
   color: $white
-  @include mainSection
 
-
-.content_title--underline
-  width: 100%
-  line-height: 3rem
+.content-title--underline
   border-bottom: 3px solid $primary
   font-weight: normal
+  line-height: 3rem
   text-transform: uppercase
+
   .underline
     display: inline-block
-    &::after
-      content: ' '
-      display: block
-      width: 100%
-      height: 3px
-      background-color: $white
-      position: relative
-      bottom: -3px
 
+    &:after
+      background-color: $white
+      bottom: -3px
+      content: ''
+      display: block
+      height: 3px
+      position: relative
+      width: 100%
 
 .header-main
   font-size: 8rem
@@ -28,58 +27,56 @@
 .header-subtitle
   font-size: 2rem
 
-.extra_info
-  font-size: 1.5rem
+.extra-info
   border-left: 3px solid $white
+  font-size: 1.5rem
   font-weight: lighter
   padding-left: 1.5rem
 
-.button__confirm
+.button-confirm__icon
   background-color: $primary
   color: $white
 
-.button__arrow
+.button-confirm__arrow
   color: $secondary
   .im
     font-size: 1rem
     font-weight: lighter
 
-.flight_search__container
-  margin: 7rem 0
-  height: 6rem
-  color: $gray
-  width: 100%
-  display: flex
-  align-items: stretch
-  justify-content: center
+.flight-search
+  &__container
+    align-items: stretch
+    color: $gray
+    display: flex
+    height: 6rem
+    justify-content: center
+    margin: 7rem 0
+    width: 100%
 
-
-
-.flight_search__plane_icon
-  width: 6rem
-  height: 6rem
-  background-color: $light80
-  //flex: 6rem
+  &__plane-icon
+    background-color: $light80
+    height: 6rem
+    width: 6rem
 
   .im-plane
-    transform: rotate(-45deg)
     font-size: 2.5rem
+    transform: rotate(-45deg)
 
-.flight_search__element
-  display: flex
-  justify-content: center
+.flight-search__element
   align-items: center
+  display: flex
   flex-direction: column
+  justify-content: center
 
 
-.flight_search__from, .flight_search__to
-  flex: 1 0 calc((100% - 6rem - 20%)/2)
+.flight-search__from, .flight-search__to
   background-color: $white
+  flex: 1 0 calc((100% - 6rem - 20%)/2)
   position: relative
 
-.flight_search__button
-  flex: 1 0 20%
+.flight-search__button
   background-color: $secondary
+  color: $white
+  flex: 1 0 20%
   font-size: 1.5rem
   font-weight: bold
-  color: $white

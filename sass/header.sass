@@ -1,33 +1,30 @@
-
 .header
   color: $white
   display: flex
   justify-content: space-between
 
 .header--right, .header--left
+  align-items: center
   display: flex
   justify-content: space-between
-  align-items: center
   *
     margin: 0 .5rem
   .link
     color: $white
-    text-decoration: none
     font-size: .9rem
     font-weight: 700
+    text-decoration: none
 
-
-.header__checkin_button
-  padding: .5rem 2.5rem
+.header__checkin-button
+  +transparentBorder
   border-radius: 8px
-  @include transparentBorder
+  padding: .5rem 2.5rem
 
 .avatar__image
-  width: 2.5rem
-  height: 2.5rem
+  +transparentBorder
   border-radius: 50%
-  @include transparentBorder
-
+  height: 2.5rem
+  width: 2.5rem
 
 .header__logo
   height: 2.5rem
