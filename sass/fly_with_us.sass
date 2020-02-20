@@ -48,15 +48,19 @@
     align-items: stretch
     color: $gray
     display: flex
-    height: 6rem
+    flex-wrap: wrap
     justify-content: center
     margin: 7rem 0
     width: 100%
 
   &__plane-icon
-    background-color: $light80
-    height: 6rem
-    width: 6rem
+    height: 0
+    width: 0
+    @media(min-width: $desktop-min)
+      display: block
+      background-color: $light80
+      height: $flight-search-container-height
+      width: $flight-search-container-height
 
   .im-plane
     font-size: 2.5rem
@@ -70,9 +74,13 @@
 
 
 .flight-search__from, .flight-search__to
+  height: $flight-search-container-height
   background-color: $white
-  flex: 1 0 calc((100% - 6rem - 20%)/2)
+  flex: 1 0 50%
+  @media(min-width: $desktop-min)
+    flex: 1 0 calc((100% - $flight-search-container-height - 20%)/2)
   position: relative
+  margin-bottom: 10px
 
 .flight-search__button
   background-color: $secondary
@@ -80,3 +88,6 @@
   flex: 1 0 20%
   font-size: 1.5rem
   font-weight: bold
+  min-height: 50px
+  @media(min-width: $desktop-min)
+    height: $flight-search-container-height
