@@ -14,17 +14,19 @@
 .card
   background: $white
   box-shadow: -9px 10px 30px -17px $gray
+  margin: 20px 0
 
   &:hover
     box-shadow: -9px 10px 30px -17px $secondary
 
 .card__image
   width: 100%
+  object-fit: cover
   @media (max-width: $mobile-max)
-    height: 250px
+    height: 150px
 
 .card__footer
-  padding: .3rem 2rem
+  padding: 10px 20px
 
   .card__label
     +cardFooterElement
@@ -32,25 +34,23 @@
     color: $gray
     display: inline-block
     font-size: .8rem
+    letter-spacing: .2rem
     text-transform: uppercase
 
   .card__title
     +cardFooterElement
-    font-size: 1.3rem
+    font-size: 16px
+    //font-size: 1.3rem
     font-weight: 700
 
 .experience__content
   padding-right: 2rem
 
-  .experience__title
-    font-size: 3.4rem
+  .header-line--left-align
+    margin: 0
 
   .experience__subtitle
     border-bottom: 1px solid $gray
-    color: $gray
-    font-size: 1.3rem
-    font-weight: lighter
-    line-height: 2rem
     padding-bottom: 2.5rem
 
   .experience__footer
@@ -70,12 +70,15 @@
     justify-content: center
     margin-right: 1rem
     width: 3rem
+    .im
+      font-size: 1.5rem
 
 .card__AR
   position: relative
 
 .card__economy
-  position: relative
-  top: 2rem
-  left: 1.5rem
+  @media (min-width: $desktop-min)
+    position: relative
+    top: 2rem
+    left: 1.5rem
 

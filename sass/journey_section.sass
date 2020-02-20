@@ -1,0 +1,33 @@
+.journey
+
+.journey__services
+  display: grid
+  grid-template-columns: 1fr 1fr
+  @media (min-width: $desktop-min)
+    grid-template-columns: 1fr 1fr 1fr
+
+  .service__element
+    justify-self: center
+    align-self: center
+    margin: 25px
+
+    .icon__container
+      border: 0px solid white
+      border-radius: 50%
+      width: 70px
+      height: 70px
+      background-color: $white
+      box-shadow: -9px 10px 30px -17px $gray
+      display: flex
+      justify-content: center
+      align-items: center
+      margin: 0 10px
+
+      .im
+        color: $secondary
+
+    .service-title
+      margin: 10px auto
+      text-align: center
+      font-weight: normal
+      font-size: 12px
