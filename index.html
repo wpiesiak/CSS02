@@ -15,7 +15,7 @@
 <body id="page-top">
 
 <!-- Header -->
-<header class="topnav">
+<header class="header">
     <div class="company-header">
         <div class="logo-container">
             <img src="./assets/logo.png" alt="Zabdos logo" class="header__logo"/>
@@ -24,20 +24,20 @@
             Zabdos
         </div>
     </div>
-    <div class="topnav--right">
-        <div class="topnav__flight-status-container ">
-            <a href="#" class="topnav__flight-status-button link">Flight Status</a>
-        </div>
-        <div class="topnav__checkin_container">
-            <a href="#" class="header__checkin-button link">Check In</a>
-        </div>
-        <div class="topnav__avatar">
-            <img src="./assets/avatar.jpg" alt="avatar" class="avatar__image" />
-        </div>
-        <div class="topnav__menu">
+    <div class="topnav" id="topnav">
+        <div class="topnav__menu-icon" id="menu-icon">
             <a href="#" class="link">
                 <i class="im im-menu"></i>
             </a>
+        </div>
+        <div class="topnav__flight-status-container topnav__element ">
+            <a href="#" class="topnav__flight-status-button topnav__element link">Flight Status</a>
+        </div>
+        <div class="topnav__checkin_container topnav__element">
+            <a href="#" class="topnav__checkin-button link">Check In</a>
+        </div>
+        <div class="topnav__avatar topnav__element">
+            <img src="./assets/avatar.jpg" alt="avatar" class="avatar__image" />
         </div>
     </div>
 </header>
@@ -206,3 +206,15 @@
 </section>
 
 </body>
+<script>
+    const menuIcon = document.getElementById('menu-icon');
+    const topnav = document.getElementById('topnav');
+    menuIcon.addEventListener('click', () => {
+        if (topnav.classList.contains('active')) {
+            topnav.classList.remove('active')
+        } else {
+            topnav.classList.add('active');
+        }
+    });
+
+</script>

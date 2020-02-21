@@ -1,32 +1,43 @@
-.topnav
+.header
   color: $white
   display: flex
   justify-content: space-between
+  font-size: 1.5rem
 
-.company-header, .topnav--right
+.company-header, .topnav
   align-items: center
   display: flex
   justify-content: space-between
   *
     margin: 0 .5rem
-  .link
-    color: $white
-    font-size: .9rem
-    font-weight: 700
-    text-decoration: none
 
-.topnav__checkin-button
-  +transparentBorder
-  border-radius: 8px
-  padding: .5rem 2.5rem
+.topnav
+  &__element
+    display: none
 
-.avatar__image
-  +transparentBorder
-  border-radius: 50%
-  height: 2.5rem
-  width: 2.5rem
+  @media(min-width: $desktop-min)
+    &__menu-icon
+      display: none
+    &__element
+      display: block
+    .link
+      color: $white
+      font-size: .9rem
+      font-weight: 700
+      text-decoration: none
 
-.topnav__logo
+    .topnav__checkin-button
+      +transparentBorder
+      border-radius: 8px
+      padding: .5rem 2.5rem
+
+    .avatar__image
+      +transparentBorder
+      border-radius: 50%
+      height: 2.5rem
+      width: 2.5rem
+
+.header__logo
   height: 2.5rem
 
 

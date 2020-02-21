@@ -56,19 +56,23 @@
     justify-content: center
     margin: 7rem 0
     width: 100%
+    @media(min-width: $desktop-min)
+      flex-wrap: nowrap
 
   &__plane-icon
-    height: 0
-    width: 0
+    display: none
+    .im-plane
+      display: none
     @media(min-width: $desktop-min)
       display: block
       background-color: $light80
       height: $flight-search-container-height
       width: $flight-search-container-height
+      .im-plane
+        display: block
+        font-size: 2.5rem
+        transform: rotate(-45deg)
 
-  .im-plane
-    font-size: 2.5rem
-    transform: rotate(-45deg)
 
 .flight-search__element
   align-items: center
@@ -82,7 +86,8 @@
   background-color: $white
   flex: 1 0 50%
   @media(min-width: $desktop-min)
-    flex: 1 0 calc((100% - $flight-search-container-height - 20%)/2)
+    //todo ask why variable doesnt work
+    flex: 1 0 calc((100% - 20% - 80px)/2)
   position: relative
   margin-bottom: 10px
 
