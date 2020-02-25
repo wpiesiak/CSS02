@@ -6,11 +6,11 @@
   border-bottom: 3px solid $primary
   font-weight: normal
   line-height: 3rem
+  margin: 0
   text-transform: uppercase
 
   .underline
     display: inline-block
-
     &:after
       background-color: $white
       bottom: -3px
@@ -20,9 +20,41 @@
       position: relative
       width: 100%
 
+.tabs
+  display: none
+  @media (min-width: $desktop-min)
+    color: $gray
+    display: flex
+    justify-content: flex-end
+    .tab
+      background-color: $light50
+      margin: 0 2px
+      padding: 10px
+      text-align: center
+      h3
+        font-size: 22px
+        margin: 0
+      .dot
+        font-family: serif
+        font-size: 35px
+        margin: 0
+      &:hover
+        h3
+          color: black
+        .dot
+          color: $secondary
+          filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.75))
+
+
 .header-main
-  font-size: 8rem
-  line-height: 1rem
+  font-size: 5rem
+  @media(min-width: $desktop-min)
+    font-size: 8rem
+    line-height: 1rem
+
+.header--higher
+  @media (min-width: $desktop-min)
+    margin-top: -30px
 
 .header-subtitle
   font-size: 2rem
@@ -41,11 +73,11 @@
   &__text
     padding: 0 3rem
   .im
-    font-size: 1.2rem
-    padding: 1rem
     background-color: $white
     color: $secondary
+    font-size: 1.2rem
     font-weight: lighter
+    padding: 1rem
 
 .flight-search
   &__container
@@ -64,8 +96,8 @@
     .im-plane
       display: none
     @media(min-width: $desktop-min)
-      display: block
       background-color: $light80
+      display: block
       height: $flight-search-container-height
       width: $flight-search-container-height
       .im-plane
@@ -82,14 +114,14 @@
 
 
 .flight-search__from, .flight-search__to
-  height: $flight-search-container-height
   background-color: $white
   flex: 1 0 50%
+  height: $flight-search-container-height
+  margin-bottom: 10px
+  position: relative
   @media(min-width: $desktop-min)
     //todo ask why variable doesnt work
     flex: 1 0 calc((100% - 20% - 80px)/2)
-  position: relative
-  margin-bottom: 10px
 
 .flight-search__button
   background-color: $secondary
