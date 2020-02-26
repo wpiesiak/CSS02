@@ -1,7 +1,7 @@
 .header
   color: $white
   display: flex
-  font-size: 1.5rem
+  font-size: $text-md
   justify-content: space-between
 
 .company-header, .topnav
@@ -9,17 +9,23 @@
   display: flex
   justify-content: space-between
   *
-    margin: 0 .5rem
+    margin: 0 $m-xs
 
 .topnav
   &__element
     display: none
 
-  @media(min-width: $desktop-min)
+.header__logo
+  height: $text-xl
+
+@media(min-width: $desktop-min)
+  .topnav
     &__menu-icon
       display: none
+
     &__element
       display: block
+
     .link
       color: $white
       font-size: .9rem
@@ -29,15 +35,10 @@
     .topnav__checkin-button
       +transparentBorder
       border-radius: 8px
-      padding: .5rem 2.5rem
+      padding: $p-xs $p-lg
 
     .avatar__image
       +transparentBorder
       border-radius: 50%
-      height: 2.5rem
-      width: 2.5rem
-
-.header__logo
-  height: 2.5rem
-
-
+      height: $text-xl
+      width: $text-xl

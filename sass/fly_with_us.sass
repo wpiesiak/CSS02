@@ -1,3 +1,5 @@
+$flight-search-container-height: 80px
+
 .fly-with-us
   +mainSection
   color: $white
@@ -25,25 +27,18 @@
 
 .header-main
   font-size: 5rem
-  @media(min-width: $desktop-min)
-    font-size: 8rem
-    line-height: 1rem
-
-.header--higher
-  @media (min-width: $desktop-min)
-    margin-top: -30px
 
 .header-subtitle
-  font-size: 2rem
+  font-size: $title-md
 
 .extra-info
   border-left: 3px solid $white
-  font-size: 1.5rem
+  font-size: $text-md
   font-weight: lighter
   padding-left: 1.5rem
 
 .button-confirm
-  font-size: 1.4rem
+  font-size: $text-md
   padding: 0
   background-color: $primary
   color: $white
@@ -54,7 +49,7 @@
     color: $secondary
     font-size: 1.2rem
     font-weight: lighter
-    padding: 1rem
+    padding: $p-sm
 
 .flight-search
   &__container
@@ -88,7 +83,7 @@
     background-color: $secondary
     color: $white
     flex: 1 0 20%
-    font-size: 1.5rem
+    font-size: $font-md
     font-weight: bold
     min-height: 50px
 
@@ -97,18 +92,22 @@
     color: $gray
     display: flex
     justify-content: flex-end
+
     .tab
       background-color: $light50
       margin: 0 2px
       padding: $p-sm
       text-align: center
+
       h3
         font-size: $title-md
         margin: 0
+
       .dot
         font-family: serif
         font-size: $title-lg
         margin: 0
+
       &:hover
         h3
           color: black
@@ -117,26 +116,33 @@
           filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.75))
 
   .flight-search
-
     &__button
       height: $flight-search-container-height
 
     &__container
       flex-wrap: nowrap
 
+    &__from, &__to
+      flex: 1 0 calc((100% - 20% - #{$flight-search-height})/2)
+
     &__plane-icon
       background-color: $light80
       display: block
       height: $flight-search-container-height
       width: $flight-search-container-height
-
       .im-plane
         display: block
-        font-size: 2.5rem
+        font-size: $text-xl
         transform: rotate(-45deg)
 
-  &__from, &__to
-    flex: 1 0 calc((100% - 20% - #{$flight-search-height})/2)
+  .header-main
+    font-size: 8rem
+    line-height: 1rem
+
+  .header--higher
+    margin-top: -8rem
+
+
 
 
 
