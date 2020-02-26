@@ -2,7 +2,7 @@
   +mainSection
   color: $white
 
-.content-title--underline
+.content-title
   border-bottom: 3px solid $primary
   font-weight: normal
   line-height: 3rem
@@ -22,29 +22,6 @@
 
 .tabs
   display: none
-  @media (min-width: $desktop-min)
-    color: $gray
-    display: flex
-    justify-content: flex-end
-    .tab
-      background-color: $light50
-      margin: 0 2px
-      padding: 10px
-      text-align: center
-      h3
-        font-size: 22px
-        margin: 0
-      .dot
-        font-family: serif
-        font-size: 35px
-        margin: 0
-      &:hover
-        h3
-          color: black
-        .dot
-          color: $secondary
-          filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.75))
-
 
 .header-main
   font-size: 5rem
@@ -88,47 +65,80 @@
     justify-content: center
     margin: 7rem 0
     width: 100%
-    @media(min-width: $desktop-min)
-      flex-wrap: nowrap
 
   &__plane-icon
     display: none
     .im-plane
       display: none
-    @media(min-width: $desktop-min)
+
+  &__element
+    align-items: center
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+  &__from, &__to
+    background-color: $white
+    flex: 1 0 50%
+    height: $flight-search-container-height
+    margin-bottom: 10px
+    position: relative
+
+  &__button
+    background-color: $secondary
+    color: $white
+    flex: 1 0 20%
+    font-size: 1.5rem
+    font-weight: bold
+    min-height: 50px
+
+@media (min-width: $desktop-min)
+  .tabs
+    color: $gray
+    display: flex
+    justify-content: flex-end
+    .tab
+      background-color: $light50
+      margin: 0 2px
+      padding: $p-sm
+      text-align: center
+      h3
+        font-size: $title-md
+        margin: 0
+      .dot
+        font-family: serif
+        font-size: $title-lg
+        margin: 0
+      &:hover
+        h3
+          color: black
+        .dot
+          color: $secondary
+          filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.75))
+
+  .flight-search
+
+    &__button
+      height: $flight-search-container-height
+
+    &__container
+      flex-wrap: nowrap
+
+    &__plane-icon
       background-color: $light80
       display: block
       height: $flight-search-container-height
       width: $flight-search-container-height
+
       .im-plane
         display: block
         font-size: 2.5rem
         transform: rotate(-45deg)
 
-
-.flight-search__element
-  align-items: center
-  display: flex
-  flex-direction: column
-  justify-content: center
+  &__from, &__to
+    flex: 1 0 calc((100% - 20% - #{$flight-search-height})/2)
 
 
-.flight-search__from, .flight-search__to
-  background-color: $white
-  flex: 1 0 50%
-  height: $flight-search-container-height
-  margin-bottom: 10px
-  position: relative
-  @media(min-width: $desktop-min)
-    //todo ask why variable doesnt work
-    flex: 1 0 calc((100% - 20% - 80px)/2)
 
-.flight-search__button
-  background-color: $secondary
-  color: $white
-  flex: 1 0 20%
-  font-size: 1.5rem
-  font-weight: bold
-  min-height: 50px
-  @media(min-width: $desktop-min)
-    height: $flight-search-container-height
+
+

@@ -2,14 +2,6 @@
   +mainSection
   display: flex
   flex-direction: column
-  @media (min-width: $desktop-min)
-    flex-direction: row
-    flex-wrap: wrap
-    justify-content: space-between
-
-.experience__element-container
-  @media (min-width: $desktop-min)
-    width: 32%
 
 .card
   background: $white
@@ -22,11 +14,10 @@
 .card__image
   width: 100%
   object-fit: cover
-  @media (max-width: $mobile-max)
-    height: 150px
 
 .card__footer
-  padding: 10px 20px
+  padding: $p-sm $p-m
+
   .card__label
     +cardFooterElement
     border-bottom: 2px solid $gray
@@ -41,21 +32,22 @@
     font-size: 16px
     font-weight: 700
 
-.experience__content
-  padding-right: 2rem
+.experience
+  &__content
+    padding-right: $p-m
 
-  .header-line--left-align
-    margin: 0
-
-  .experience__subtitle
+  .&__subtitle
     border-bottom: 1px solid $gray
-    padding-bottom: 2.5rem
+    padding-bottom: $p-m
 
-  .experience__footer
+  .&__footer
     align-items: center
     color: $gray
     display: flex
     font-weight: lighter
+
+  .header-line--left-align
+    margin: 0
 
   .play-icon
     align-items: center
@@ -66,17 +58,32 @@
     display: flex
     height: 3rem
     justify-content: center
-    margin-right: 1rem
+    margin-right: $m-sm
     width: 3rem
+
     .im
       font-size: 1.5rem
 
 .card__AR
   position: relative
 
-.card__economy
-  @media (min-width: $desktop-min)
+@media (min-width: $desktop-min)
+  .experience
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+
+    &__element-container
+      width: 32%
+
+  .card__image
+    height: 150px
+
+  .card__economy
     left: 1.5rem
     position: relative
     top: 2rem
+
+
+
 
