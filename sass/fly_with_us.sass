@@ -83,11 +83,13 @@ $flight-search-container-height: 80px
     background-color: $secondary
     color: $white
     flex: 1 0 20%
-    font-size: $font-md
+    font-size: $text-md
     font-weight: bold
     min-height: 50px
 
 @media (min-width: $desktop-min)
+  .tabs
+    display: flex
   .tabs
     color: $gray
     display: flex
@@ -110,7 +112,7 @@ $flight-search-container-height: 80px
 
       &:hover
         h3
-          color: black
+          color: $black
         .dot
           color: $secondary
           filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.75))
@@ -123,11 +125,11 @@ $flight-search-container-height: 80px
       flex-wrap: nowrap
 
     &__from, &__to
-      flex: 1 0 calc((100% - 20% - #{$flight-search-height})/2)
+      flex: 1 0 calc((100% - 20% - #{$flight-search-container-height})/2)
 
     &__plane-icon
       background-color: $light80
-      display: block
+      display: flex
       height: $flight-search-container-height
       width: $flight-search-container-height
       .im-plane
@@ -140,7 +142,7 @@ $flight-search-container-height: 80px
     line-height: 1rem
 
   .header--higher
-    margin-top: -8rem
+    margin-top: -$title-lg
 
 
 
