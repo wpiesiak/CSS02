@@ -1,8 +1,7 @@
 $backgroundImage: url('../assets/background1.jpeg')
 
 //breakpoints
-$mobile-max: 480px
-$desktop-min: 481px
+$min-width: 576px
 
 //colors
 $white: #fff
@@ -16,22 +15,48 @@ $light50: rgba(250, 252, 247, .5)
 $light80: rgba(250, 252, 247, .8)
 $white30: rgba(250, 252, 247, .3)
 
-//paddings
-$p-xs: .5rem
-$p-sm: 1rem
-$p-m: 2rem
-$p-lg: 2.5rem
+//----- fonts sizes and line-heights -----------------------------------------------------------------------------------
+$font-size-xs:                    12px
+$font-size-sm:                    14px
+$font-size-base:                  18px
+$font-size-lg:                    24px
+$font-size-xl:                    36px
+$font-size-2xl:                   48px
+$font-size-3xl:                   72px
 
-$m-xs: .5rem
-$m-sm: 1rem
+//----- spacings (margins/paddings) ------------------------------------------------------------------------------------
+$m-xs:                            8px
+$m-sm:                            $m-xs * 2
+$m-base:                          $m-xs * 3
+$m-lg:                            $m-base * 2
+$m-xl:                            $m-base * 3
+$m-2xl:                           $m-base * 4
 
-$title-sm: 12px
-$title-md: 24px
-$title-lg: 36px
-$title-xl: 46px
-$title-xxl: 5rem
+//----- line heights ---------------------------------------------------------------------------------------------------
+$line-height-sm:                  $m-sm
+$line-height-base:                $m-base
+$line-height-lg:                  $m-lg
 
-$text-md: 1.5rem
-$text-xl: 2.5rem
+//----- border radiuses ------------------------------------------------------------------------------------------------
+$border-radius-base:              $m-base
+$border-radius-sm:                $m-xs
+$border-radius-lg:                $m-lg
 
+//----- fonts ----------------------------------------------------------------------------------------------------------
+$font-weight-light:               300
+$font-weight-regular:             400
+$font-weight-bold:                700
 
+$icon-size:                       $m-base
+
+//----- transitions ----------------------------------------------------------------------------------------------------
+$transition-duration:             .3s
+$transition-function:              ease-in-out
+
+//----- z-indexes ------------------------------------------------------------------------------------------------------
+$z-negative:                      -1
+$z-lower:                         30
+$z-low:                           40
+$z-base:                          50
+$z-high:                          60
+$z-higher:                        70

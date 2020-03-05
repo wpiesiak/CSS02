@@ -3,59 +3,12 @@
   display: flex
   flex-direction: column
 
-.card
-  background: $white
-  box-shadow: -9px 10px 30px -17px $gray
-  margin: 20px 0
-
-  .card__image-container
-    position: relative
-
-    &:after
-      content: ''
-      position: absolute
-      left: 0
-      top: 0
-      width: 100%
-      height: 100%
-      background: $secondary
-      opacity: 0
-      transition: .5s ease
-
-  &:hover
-    box-shadow: -9px 10px 30px -17px $secondary
-    .card__image-container:after
-      opacity: 0.5
-
-.card__image
-  width: 100%
-  object-fit: cover
-  height: 150px
-
-.card__footer
-  padding: $p-sm $p-m
-
-  .card__label
-    +cardFooterElement
-    border-bottom: 2px solid $gray
-    color: $gray
-    display: inline-block
-    font-size: .8rem
-    letter-spacing: .2rem
-    text-transform: uppercase
-
-  .card__title
-    +cardFooterElement
-    font-size: 16px
-    font-weight: 700
-
-.experience
   &__content
-    padding-right: $p-m
+    padding-right: $m-base
 
   &__subtitle
     border-bottom: 1px solid $gray
-    padding-bottom: $p-m
+    padding-bottom: $m-base
 
   &__footer
     align-items: center
@@ -81,10 +34,57 @@
     .im
       font-size: 1.5rem
 
-.card__AR
-  position: relative
+.card
+  background: $white
+  box-shadow: -9px 10px 30px -17px $gray
+  margin: 20px 0
 
-@media (min-width: $desktop-min)
+  &__image-container
+    position: relative
+
+    &:after
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      background: $secondary
+      opacity: 0
+      transition: .5s ease
+
+  &:hover
+    box-shadow: -9px 10px 30px -17px $secondary
+    .card__image-container:after
+      opacity: 0.5
+
+.card
+  &__image
+    width: 100%
+    object-fit: cover
+    height: 150px
+
+  &__footer
+    padding: $m-sm $m-base
+
+  &__label
+    +cardFooterElement
+    border-bottom: 2px solid $gray
+    color: $gray
+    display: inline-block
+    font-size: .8rem
+    letter-spacing: .2rem
+    text-transform: uppercase
+
+  &__title
+    +cardFooterElement
+    font-size: 16px
+    font-weight: 700
+
+  &__AR
+    position: relative
+
+@media (min-width: $min-width)
   .experience
     flex-direction: row
     flex-wrap: wrap
@@ -93,13 +93,14 @@
     &__element-container
       width: 32%
 
-  .card__image
-    height: auto
+  .card
+    &__image
+      height: auto
 
-  .card__economy
-    left: 1.5rem
-    position: relative
-    top: 2rem
+    &__economy
+      left: 1.5rem
+      position: relative
+      top: 2rem
 
 
 

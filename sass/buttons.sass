@@ -2,14 +2,12 @@
 .button
   background-color: $white
   border: none
-  padding: $p-sm
+  padding: $m-sm
 
-.button-group *
-  float: left
+  &-group div
+    float: left
 
-.button-group:after
-  clear: both
-  content: ''
-  display: block
-
-
+    &:after
+      clear: both
+      content: ''
+      display: block

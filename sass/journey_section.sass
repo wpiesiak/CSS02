@@ -1,16 +1,20 @@
 .journey
   +mainSection
-  &__header
-    @media (min-width: $desktop-min)
+
+  &__services
+    display: grid
+    grid-template-columns: 1fr 1fr
+
+@media (min-width: $min-width)
+  .journey
+
+    &__header
       margin: auto
       text-align: center
       width: 60%
 
-.journey__services
-  display: grid
-  grid-template-columns: 1fr 1fr
-  @media (min-width: $desktop-min)
-    grid-template-columns: 1fr 1fr 1fr
+    &__services
+      grid-template-columns: 1fr 1fr 1fr
 
   .service__element
     align-self: center
@@ -30,10 +34,12 @@
       margin: 0 auto
       position: relative
       width: 70px
+
       &:hover
         background-color: $secondary
         box-shadow: 10px 15px 20px -14px $secondary
         color: $white
+
         &:after
           border-radius: 50%
           border: 4px solid $white
@@ -44,6 +50,7 @@
           position: absolute
           right: -15px
           top: -15px
+
         &:before
           border-radius: 50%
           border: 2px solid $white
