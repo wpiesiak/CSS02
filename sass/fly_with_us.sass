@@ -42,16 +42,17 @@ $flight-search-container-height: 80px
   padding: 0
   background-color: $primary
   color: $white
+  display: flex
 
   &__text
-    padding: 0 3rem
+    padding: $m-sm $m-lg
 
-  .im
+  .button-confirm__icon
     background-color: $white
-    color: $secondary
-    font-size: 1.2rem
-    font-weight: lighter
     padding: $m-sm
+
+    .icon--arrow
+      fill: $secondary
 
 .flight-search
 
@@ -125,7 +126,6 @@ $flight-search-container-height: 80px
           filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.75))
 
   .flight-search
-
     &__button
       height: $flight-search-container-height
 
@@ -141,10 +141,9 @@ $flight-search-container-height: 80px
       height: $flight-search-container-height
       width: $flight-search-container-height
 
-      .im-plane
-        display: block
-        font-size: $font-size-lg
+      .plane-icon
         transform: rotate(-45deg)
+        fill: $gray
 
   .header-main
     font-size: 8rem
