@@ -1,5 +1,7 @@
 .idea
+.idea/*
 *.css
 *.css.map
 sass/.sass-cache
 .DS_Store
+node_modules

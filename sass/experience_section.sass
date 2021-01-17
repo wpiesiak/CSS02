@@ -1,3 +1,4 @@
+
 .experience
   +mainSection
   display: flex
@@ -7,70 +8,87 @@
     padding-right: $m-base
 
   &__subtitle
-    border-bottom: 1px solid $gray
+    border-bottom: $border-xs solid $gray
     padding-bottom: $m-base
 
   &__footer
     align-items: center
     color: $gray
     display: flex
+    font-size: $font-size-sm
     font-weight: lighter
 
     .icon--play
       display: inline-block
       fill: $secondary
-      height: 3rem
+      height: $font-size-xl
       margin-right: $m-sm
-      width: 3rem
+      width: $font-size-xl
 
   .header-line--left-align
     margin: 0
 
 .card
   background: $white
-  box-shadow: -9px 10px 30px -17px $gray
-  margin: 20px 0
+  box-shadow: $shadow $gray
+  margin: $m-base 0
 
-  &__image-container
+  &__image__wrapper
     position: relative
 
     &:after
-      content: ''
-      position: absolute
-      left: 0
-      top: 0
-      width: 100%
-      height: 100%
       background: $secondary
+      content: ''
+      height: 100%
+      left: 0
       opacity: 0
+      position: absolute
+      top: 0
       transition: .5s ease
+      width: 100%
 
   &:hover
-    box-shadow: -9px 10px 30px -17px $secondary
-    .card__image-container:after
+    box-shadow: $shadow $secondary
+    .card__image__wrapper:after
       opacity: 0.5
 
+  &:hover &__extra-content
+    bottom: 0
+    color: $white
+    display: block
+    font-size: $font-size-base
+    padding: $m-base
+    position: absolute
+
 .card
+  &__extra-content
+    display: none
+
+    .icon
+      height: $font-size-xl
+      fill: $white
+      width: $font-size-xl
+
   &__image
-    width: 100%
+    height: $card-size
     object-fit: cover
-    height: 150px
+    width: 100%
 
   &__footer
     padding: $m-sm $m-base
 
   &__label
     +cardFooterElement
-    border-bottom: 2px solid $gray
+    border-bottom: $border-sm solid $gray
     color: $gray
     display: inline-block
-    font-size: .8rem
-    letter-spacing: .2rem
+    font-size: $font-size-xxs
+    letter-spacing: $m-xxs
     text-transform: uppercase
 
   &__title
     +cardFooterElement
-    font-size: 16px
+    font-size: $font-size-base
     font-weight: 700
 
   &__AR
@@ -82,18 +100,30 @@
     flex-wrap: wrap
     justify-content: space-between
 
-    &__element-container
-      width: 32%
+    &__content
+      padding-right: $m-lg
+
+    &__subtitle
+      padding-right: $m-lg
+
+    &__column
+      width: 33%
+
+    &__footer
+      font-size: $font-size-base
+
+      .icon--play
+        height: $font-size-2xl
+        width: $font-size-2xl
 
   .card
     &__image
       height: auto
 
     &__economy
-      left: 1.5rem
+      left: $m-base
       position: relative
-      top: 2rem
+      top: $m-xl
 
-
-
-
+    &__label
+      font-size: $font-size-xs
