@@ -1,4 +1,5 @@
-$backgroundImage: url('../assets/background1.jpeg')
+$backgroundImage: url('../assets/background.png')
+$backgroundImageMobile: url('../assets/background-mobile.jpg')
 
 //breakpoints
 $min-width: 576px
@@ -8,6 +9,7 @@ $white: #fff
 $black: #000
 $primary: #52aebb
 $secondary: #6e77ee
+$background-color: #fafcf7
 $gray: #b7bcc2
 $light: #fafcf7
 $light-secondary: #f9fbf6
@@ -16,6 +18,7 @@ $light80: rgba(250, 252, 247, .8)
 $white30: rgba(250, 252, 247, .3)
 
 //----- fonts sizes and line-heights -----------------------------------------------------------------------------------
+$font-size-xxs:                   10px
 $font-size-xs:                    12px
 $font-size-sm:                    14px
 $font-size-base:                  18px
@@ -25,6 +28,8 @@ $font-size-2xl:                   48px
 $font-size-3xl:                   72px
 
 //----- spacings (margins/paddings) ------------------------------------------------------------------------------------
+$m-3xs:                           2px
+$m-xxs:                           4px
 $m-xs:                            8px
 $m-sm:                            $m-xs * 2
 $m-base:                          $m-xs * 3
@@ -42,12 +47,19 @@ $border-radius-base:              $m-base
 $border-radius-sm:                $m-xs
 $border-radius-lg:                $m-lg
 
+//---- border thicknes -------------------------------------------------------------------------------------------------
+$border-xs:                       1px
+$border-sm:                       2px
+$border-base:                     3px
+
 //----- fonts ----------------------------------------------------------------------------------------------------------
 $font-weight-light:               300
 $font-weight-regular:             400
 $font-weight-bold:                700
 
 $icon-size:                       $m-base
+$icon-lg:                         $m-xl
+$icon-xl:                         $m-2xl
 
 //----- transitions ----------------------------------------------------------------------------------------------------
 $transition-duration:             .3s
@@ -60,3 +72,12 @@ $z-low:                           40
 $z-base:                          50
 $z-high:                          60
 $z-higher:                        70
+
+
+//---- other variables -------------------------------------------------------------------------------------------------
+$card-size: 150px
+$flight-search-container-height: 120px
+$search-button-height: 50px
+$base-shadow: drop-shadow(1px 1px 2px rgba(0,0,0,0.75))
+$shadow: -9px 10px 30px -17px
+$shadow-lg: 10px 15px 50px -10px

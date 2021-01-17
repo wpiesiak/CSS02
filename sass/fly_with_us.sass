@@ -1,55 +1,59 @@
-$flight-search-container-height: 80px
 
 .fly-with-us
   +mainSection
   color: $white
 
 .content-title
-  border-bottom: 3px solid $primary
+  border-bottom: $border-base solid $light50
   font-weight: normal
-  line-height: 3rem
-  margin: 0
+  font-size: $font-size-xs
+  line-height: $line-height-base
+  margin: $m-base 0
   text-transform: uppercase
 
   .underline
     display: inline-block
     &:after
       background-color: $white
-      bottom: -3px
+      bottom: -$m-3xs
       content: ''
       display: block
-      height: 3px
+      height: $m-3xs
       position: relative
       width: 100%
 
 .tabs
   display: none
 
-.header-main
-  font-size: 5rem
+.header--main
+  font-size: $font-size-2xl
 
-.header-subtitle
-  font-size: $font-size-lg
+.header__subtitle
+  font-size: $font-size-base
+  line-height: $line-height-base
 
 .extra-info
-  border-left: 3px solid $white
-  font-size: $font-size-base
+  border-left: $border-base solid $white
+  font-size: $font-size-sm
   font-weight: lighter
-  padding-left: 1.5rem
+  padding: $m-xxs $m-base
 
 .button-confirm
-  font-size: $font-size-base
-  padding: 0
-  background-color: $primary
-  color: $white
-  display: flex
+  &__wrapper
+    align-items: center
+    background-color: $primary
+    color: $white
+    display: flex
+    font-size: $font-size-sm
+    margin: $m-sm 0
+    padding: 0
 
   &__text
-    padding: $m-sm $m-lg
+    padding: $m-xs $m-sm
 
-  .button-confirm__icon
+  &__icon
     background-color: $white
-    padding: $m-sm
+    padding: $m-xs
 
     .icon--arrow
       fill: $secondary
@@ -62,7 +66,7 @@ $flight-search-container-height: 80px
     display: flex
     flex-wrap: wrap
     justify-content: center
-    margin: 7rem 0
+    margin: $m-xl 0
     width: 100%
 
   &__plane-icon
@@ -71,7 +75,7 @@ $flight-search-container-height: 80px
       display: none
 
   &__element
-    align-items: center
+    align-items: baseline
     display: flex
     flex-direction: column
     justify-content: center
@@ -80,81 +84,111 @@ $flight-search-container-height: 80px
     background-color: $white
     flex: 1 0 50%
     height: $flight-search-container-height
-    margin-bottom: 10px
+    margin-bottom: $m-sm
     position: relative
 
+    .label-custom
+      margin-left: $m-xs
+
   &__button
+    align-items: center
     background-color: $secondary
     color: $white
     flex: 1 0 20%
-    font-size: $font-size-base
+    font-size: $font-size-sm
     font-weight: bold
-    min-height: 50px
+    min-height: $search-button-height
+
 
 @media (min-width: $min-width)
-
-  .tabs
-    display: flex
 
   .tabs
     color: $gray
     display: flex
     justify-content: flex-end
+    margin-top: -$m-base
 
     .tab
-      background-color: $light50
-      margin: 0 2px
+      backdrop-filter: blur($m-xxs)
+      background-color: rgba($white, .15)
+      cursor: pointer
+      margin: 0 $m-3xs
       padding: $m-sm
       text-align: center
 
-      h3
+      &__name
         font-size: $font-size-lg
         margin: 0
 
-      .dot
+      &__dot
         font-family: serif
         font-size: $font-size-xl
         margin: 0
 
       &:hover
-
-        h3
+        .tab__name
           color: $black
 
-        .dot
+        .tab__dot
           color: $secondary
-          filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.75))
+          filter: $base-shadow
+
+  .content-title
+    font-size: $font-size-base
+    line-height: $line-height-lg
 
   .flight-search
     &__button
       height: $flight-search-container-height
+      font-size: $font-size-lg
 
     &__container
       flex-wrap: nowrap
+      margin: $m-2xl*1.5 0 $m-xl 0
 
     &__from, &__to
       flex: 1 0 calc((100% - 20% - #{$flight-search-container-height})/2)
 
+      .select-wrapper
+        display: flex
+        flex-direction: column
+        margin: auto
+
     &__plane-icon
+      align-items: center
       background-color: $light80
       display: flex
       height: $flight-search-container-height
+      justify-content: center
       width: $flight-search-container-height
 
       .plane-icon
-        transform: rotate(-45deg)
         fill: $gray
+        height: $font-size-2xl
+        transform: rotate(-45deg)
+        width: $font-size-2xl
 
-  .header-main
-    font-size: 8rem
-    line-height: 1rem
+  .header--main
+    font-size: $font-size-3xl*2
+    line-height: $line-height-base
+
+  .header__subtitle
+    font-size: $font-size-xl
 
   .header--higher
-    margin-top: -$font-size-xl
+    margin-top: -$m-base
 
+  .extra-info
+    font-size: $font-size-base
+    padding: 0 $m-base
 
+  .button-confirm
+    &__wrapper
+      font-size: $font-size-base
+      margin-top: $m-lg
 
+    &__text
+      padding: $m-base $m-lg
 
-
-
-
+    &__icon
+      padding: $m-base

@@ -4,13 +4,13 @@
 .subtitle
   color: $gray
   font-size: $font-size-xs
-  font-weight: 200
-  line-height: 2em
+  font-weight: lighter
 
 .header-line
-  border-radius: 5px
-  border: 3px solid $secondary
-  margin-top: 100px
+  background-color: $secondary
+  border-radius: $border-radius-sm
+  border: $border-base solid $secondary
+  margin-top: $m-2xl
   width: 15%
 
 @media(min-width: $min-width)
@@ -19,3 +19,7 @@
 
   .subtitle
     font-size: $font-size-lg
+    line-height: $line-height-lg
+
+  .header-line
+    height: $m-xs

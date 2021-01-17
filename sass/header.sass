@@ -1,10 +1,10 @@
-.header
+.header__wrapper
   color: $white
   display: flex
   font-size: $font-size-base
   justify-content: space-between
 
-.company-header, .topnav
+.company__header, .topnav
   align-items: center
   display: flex
   justify-content: space-between
@@ -12,35 +12,44 @@
   .menu-icon
     fill: $white
 
-  div
-    margin: 0 $m-xs
-
 .topnav
   &__element
     display: none
 
-.header__logo
+.company__logo
   height: $font-size-lg
 
 @media(min-width: $min-width)
+  .company
+    &__header
+      display: flex
+      align-items: center
+
+    &__logo
+      height: $font-size-2xl
+
+    &__name
+      font-size: $font-size-lg
+
   .topnav
 
     &__element
       display: block
+      margin: 0 $m-base
 
     .link
       color: $white
-      font-size: .9rem
+      font-size: $font-size-base
       font-weight: 700
       text-decoration: none
 
-    .topnav__checkin-button
+    &__check-in__button
       +transparentBorder
-      border-radius: 8px
+      border-radius: $border-radius-sm
       padding: $m-xs $m-lg
 
     .avatar__image
       +transparentBorder
       border-radius: 50%
-      height: $font-size-lg
-      width: $font-size-lg
+      height: $font-size-sm + $m-base
+      width: $font-size-sm + $m-base

@@ -1,22 +1,19 @@
-@import './_variables'
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap')
 
-html
-  font-size: 11px
 
 body
-  background-color: $light
-  background-image: linear-gradient(to bottom,  rgba(255,255,255,0) 0%, $light50 80%, $light 100%), $backgroundImage
-  background-repeat: no-repeat no-repeat
-  background-size: 100vw 50vh
+  background-color: $background-color
   font-family: "Open Sans", sans-serif
-  padding: $m-sm
 
+.top-container
+  background-image: $backgroundImageMobile
+  background-repeat: no-repeat no-repeat
+  background-size: 100vw
   @media (min-width: $min-width)
-    background-size: 100vw 800px
-    padding: $m-base
+    background-image: linear-gradient(to bottom,  rgba($white,0) 0%, rgba($white,0) 50%, $light50 80%, $light 100%), $backgroundImage
+    background-size: 100vw
 
-
-
-
-
+.main-container
+  padding: $m-sm
+  @media (min-width: $min-width)
+    padding: $m-lg
