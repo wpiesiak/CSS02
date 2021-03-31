@@ -1,10 +1,9 @@
-.header__wrapper
+.header
   color: $white
   display: flex
-  font-size: $font-size-base
   justify-content: space-between
 
-.company__header, .topnav
+.company, .topnav
   align-items: center
   display: flex
   justify-content: space-between
@@ -21,9 +20,8 @@
 
 @media(min-width: $min-width)
   .company
-    &__header
-      display: flex
-      align-items: center
+    display: flex
+    align-items: center
 
     &__logo
       height: $font-size-2xl

@@ -1,17 +1,19 @@
-
 .fly-with-us
   +mainSection
   color: $white
 
-.content-title
-  border-bottom: $border-base solid $light50
-  font-weight: normal
-  font-size: $font-size-xs
-  line-height: $line-height-base
-  margin: $m-base 0
-  text-transform: uppercase
+  &__header
+    font-size: $font-size-2xl
 
-  .underline
+  &__content-title
+    border-bottom: $border-base solid $gray-light-transparent-50
+    font-weight: normal
+    font-size: $font-size-xs
+    line-height: $line-height-base
+    margin: $m-base 0
+    text-transform: uppercase
+
+  &__underline
     display: inline-block
     &:after
       background-color: $white
@@ -22,31 +24,28 @@
       position: relative
       width: 100%
 
+  &__subtitle
+    font-size: $font-size-base
+    line-height: $line-height-base
+
+  &__info
+    border-left: $border-base solid $white
+    font-size: $font-size-sm
+    font-weight: lighter
+    padding: $m-xxs $m-base
+
 .tabs
   display: none
 
-.header--main
-  font-size: $font-size-2xl
-
-.header__subtitle
-  font-size: $font-size-base
-  line-height: $line-height-base
-
-.extra-info
-  border-left: $border-base solid $white
-  font-size: $font-size-sm
-  font-weight: lighter
-  padding: $m-xxs $m-base
-
 .button-confirm
-  &__wrapper
-    align-items: center
-    background-color: $primary
-    color: $white
-    display: flex
-    font-size: $font-size-sm
-    margin: $m-sm 0
-    padding: 0
+  align-items: center
+  background-color: $primary
+  border: none
+  color: $white
+  display: flex
+  font-size: $font-size-sm
+  margin: $m-sm 0
+  padding: 0
 
   &__text
     padding: $m-xs $m-sm
@@ -55,24 +54,20 @@
     background-color: $white
     padding: $m-xs
 
-    .icon--arrow
-      fill: $secondary
+  &__arrow
+    fill: $secondary
 
 .flight-search
+  align-items: stretch
+  color: $gray
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  margin: $m-xl 0
+  width: 100%
 
-  &__container
-    align-items: stretch
-    color: $gray
-    display: flex
-    flex-wrap: wrap
-    justify-content: center
-    margin: $m-xl 0
-    width: 100%
-
-  &__plane-icon
+  &__plane
     display: none
-    .im-plane
-      display: none
 
   &__element
     align-items: baseline
@@ -80,112 +75,130 @@
     flex-direction: column
     justify-content: center
 
-  &__from, &__to
+  &__element.-field
     background-color: $white
     flex: 1 0 50%
     height: $flight-search-container-height
     margin-bottom: $m-sm
     position: relative
 
-    .label-custom
-      margin-left: $m-xs
-
-  &__button
+  &__element.-button
     align-items: center
     background-color: $secondary
+    border: none
     color: $white
     flex: 1 0 20%
     font-size: $font-size-sm
     font-weight: bold
-    min-height: $search-button-height
+    min-height: $m-lg
 
+  &__label
+    color: $gray
+    display: block
+    font-size: $font-size-xs
+    font-weight: $font-weight-light
+    margin-left: $m-xs
+
+  &__select
+    appearance: none
+    background-color: transparent
+    border: none
+    display: block
+    font-size: $font-size-sm
+    font-weight: $font-weight-bold
+    padding: $m-xs $m-base $m-xs $m-xs
 
 @media (min-width: $min-width)
 
+  .fly-with-us
+    &__header
+      font-size: $font-size-2xl*3
+      line-height: $line-height-base
+      margin-top: -$m-base
+
+    &__content-title
+      font-size: $font-size-base
+      line-height: $line-height-lg
+
+    &__subtitle
+      font-size: $font-size-xl
+
+    &__info
+      font-size: $font-size-base
+      padding: 0 $m-base
+
   .tabs
-    color: $gray
     display: flex
     justify-content: flex-end
     margin-top: -$m-base
 
-    .tab
-      backdrop-filter: blur($m-xxs)
-      background-color: rgba($white, .15)
-      cursor: pointer
-      margin: 0 $m-3xs
-      padding: $m-sm
-      text-align: center
+  .tab
+    backdrop-filter: blur($m-xxs)
+    background-color: rgba($white, .15)
+    cursor: pointer
+    margin: 0 $m-3xs
+    padding: $m-sm
+    text-align: center
+    color: $gray
+    font-size: $font-size-lg
 
-      &__name
-        font-size: $font-size-lg
-        margin: 0
+    &__input
+      display: none
 
-      &__dot
-        font-family: serif
-        font-size: $font-size-xl
-        margin: 0
+    &:after
+      content: ''
+      background-color: $gray
+      display: block
+      border-radius: 50%
+      height: $m-xs
+      width: $m-xs
+      margin: $m-lg auto 0 auto
 
-      &:hover
-        .tab__name
-          color: $black
-
-        .tab__dot
-          color: $secondary
-          filter: $base-shadow
-
-  .content-title
-    font-size: $font-size-base
-    line-height: $line-height-lg
+    &:hover, &__input:checked + .tab
+      color: $black
+      &:after
+        background-color: $secondary
+        filter: $base-shadow
 
   .flight-search
-    &__button
+    flex-wrap: nowrap
+    margin: $m-2xl*1.5 0 $m-xl 0
+
+    &__element.-button
       height: $flight-search-container-height
       font-size: $font-size-lg
 
-    &__container
-      flex-wrap: nowrap
-      margin: $m-2xl*1.5 0 $m-xl 0
-
-    &__from, &__to
+    &__element.-field
       flex: 1 0 calc((100% - 20% - #{$flight-search-container-height})/2)
 
-      .select-wrapper
-        display: flex
-        flex-direction: column
-        margin: auto
+    &__select-wrapper
+      display: flex
+      flex-direction: column
+      margin: auto
 
-    &__plane-icon
+    &__select
+      font-size: $font-size-base
+
+    &__label
+      font-size: $font-size-sm
+
+    &__plane
       align-items: center
-      background-color: $light80
+      background-color: $gray-light-transparent-80
       display: flex
       height: $flight-search-container-height
       justify-content: center
       width: $flight-search-container-height
 
-      .plane-icon
-        fill: $gray
-        height: $font-size-2xl
-        transform: rotate(-45deg)
-        width: $font-size-2xl
-
-  .header--main
-    font-size: $font-size-3xl*2
-    line-height: $line-height-base
-
-  .header__subtitle
-    font-size: $font-size-xl
-
-  .header--higher
-    margin-top: -$m-base
-
-  .extra-info
-    font-size: $font-size-base
-    padding: 0 $m-base
+    &__plane-icon
+      fill: $gray
+      height: $font-size-2xl
+      transform: rotate(-45deg)
+      width: $font-size-2xl
 
   .button-confirm
-    &__wrapper
-      font-size: $font-size-base
-      margin-top: $m-lg
+    font-size: $font-size-base
+    margin-top: $m-lg
 
     &__text
       padding: $m-base $m-lg
