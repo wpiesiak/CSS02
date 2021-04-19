@@ -23,69 +23,59 @@
             </div>
         </div>
         <nav class="topnav">
-            <div class="topnav__flight-status-container topnav__element ">
-                <a href="#" class="topnav__element link">Flight Status</a>
-            </div>
-            <div class="topnav__element">
-                <a href="#" class="topnav__check-in__button link">Check In</a>
-            </div>
-            <div class="topnav__element">
-                <img src="./assets/avatar.jpg" alt="avatar" class="avatar__image" />
-            </div>
-            <div class="topnav__menu-icon">
-                <a href="#" class="link">
-                    <svg
-                            class="menu-icon"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24">
-                        <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/>
-                    </svg>
-                </a>
-            </div>
+            <a href="#" class="topnav__link">Flight Status</a>
+            <a href="#" class="topnav__button">Check In</a>
+            <img src="./assets/avatar.jpg" alt="avatar" class="topnav__avatar" />
+            <a href="#">
+                <svg
+                        class="topnav__menu-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24">
+                    <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/>
+                </svg>
+            </a>
         </nav>
     </header>
 
     <!-- Fly with us section -->
     <section class="fly-with-us">
 
-        <div class="container">
-            <h2 class="fly-with-us__content-title">
-                <span class="fly-with-us__underline">Fly with us to</span>
-            </h2>
-            <div class="tabs">
-                <input class="tab__input" type="radio" id="tab-1" name="tab" value="1">
-                <label for="tab-1" class="tab">01</label>
-                <input class="tab__input" type="radio" id="tab-2" name="tab" value="2">
-                <label for="tab-2" class="tab">02</label>
-                <input class="tab__input" type="radio" id="tab-3" name="tab" value="3">
-                <label for="tab-3" class="tab">03</label>
-            </div>
-
-            <h1 class="fly-with-us__header">Bangkok</h1>
-            <h3 class="fly-with-us__subtitle">A new door to Paradise for just 15000</h3>
-            <div class="fly-with-us__info">
-                <p>Book now till 25 Oct 2019</p>
-                <p>Travel from 25 Oct 2019 to 25 Dec 2019</p>
-            </div>
-
-            <button class="button-confirm">
-                <span class="button-confirm__text">Let's Go </span>
-                <div class="button-confirm__icon">
-                    <svg
-                            class="button-confirm__arrow"
-                            width="24"
-                            height="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill-rule="evenodd"
-                            clip-rule="evenodd">
-                        <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/>
-                    </svg>
-                </div>
-            </button>
-
+        <h2 class="fly-with-us__content-title">
+            <span class="fly-with-us__underline">Fly with us to</span>
+        </h2>
+        <div class="tabs">
+            <input class="tab__input" type="radio" id="tab-1" name="tab" value="1">
+            <label for="tab-1" class="tab">01</label>
+            <input class="tab__input" type="radio" id="tab-2" name="tab" value="2">
+            <label for="tab-2" class="tab">02</label>
+            <input class="tab__input" type="radio" id="tab-3" name="tab" value="3">
+            <label for="tab-3" class="tab">03</label>
         </div>
+
+        <h1 class="fly-with-us__header">Bangkok</h1>
+        <h3 class="fly-with-us__subtitle">A new door to Paradise for just 15000</h3>
+        <div class="fly-with-us__info">
+            <p>Book now till 25 Oct 2019</p>
+            <p>Travel from 25 Oct 2019 to 25 Dec 2019</p>
+        </div>
+
+        <button class="button-confirm">
+            <span class="button-confirm__text">Let's Go </span>
+            <div class="button-confirm__icon">
+                <svg
+                        class="button-confirm__arrow"
+                        width="24"
+                        height="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd">
+                    <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/>
+                </svg>
+            </div>
+        </button>
+
         <div class="flight-search">
             <div class="flight-search__plane">
                 <svg
@@ -99,23 +89,19 @@
             <div class="flight-search__element -field">
                 <div class="flight-search__select-wrapper">
                     <label for="departure-airport" class="flight-search__label">Departure airport</label>
-                    <div class="select__container">
                         <select name="departure-airport" id="departure-airport" class="flight-search__select">
                             <option>Mumbai (BOM)</option>
                             <option>New York (NY)</option>
                             <option>Los Angeles (LA)</option>
                         </select>
-                    </div>
                 </div>
             </div>
             <div class="flight-search__element -field">
                 <div class="flight-search__select-wrapper">
                     <label for="arrival-airport" class="flight-search__label">Arrival airport</label>
-                    <div class="select__container">
                         <select name="arrival-airport" id="arrival-airport" class="flight-search__select">
                             <option>Aaalborg (AAL)</option>
                         </select>
-                    </div>
                 </div>
             </div>
             <button class="flight-search__element -button">
@@ -201,7 +187,7 @@
     </section>
 </div>
 
-<section class="journey main-container">
+<section class="journey">
     <div class="journey__header">
         <h1 class="title">Complement Your Journey</h1>
         <h3 class="subtitle">

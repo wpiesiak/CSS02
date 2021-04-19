@@ -8,12 +8,12 @@
   display: flex
   justify-content: space-between
 
-  .menu-icon
-    fill: $white
-
 .topnav
-  &__element
+  &__avatar, &__button, &__link
     display: none
+
+  &__menu-icon
+    fill: $white
 
 .company__logo
   height: $font-size-lg
@@ -30,24 +30,25 @@
       font-size: $font-size-lg
 
   .topnav
+    font-size: $font-size-base
+    font-weight: 700
 
-    &__element
-      display: block
-      margin: 0 $m-base
-
-    .link
+    &__link
       color: $white
-      font-size: $font-size-base
-      font-weight: 700
+      margin: 0 $m-base
       text-decoration: none
 
-    &__check-in__button
+    &__button
       +transparentBorder
       border-radius: $border-radius-sm
+      color: $white
+      margin: 0 $m-base
+      text-decoration: none
       padding: $m-xs $m-lg
 
-    .avatar__image
+    &__avatar
       +transparentBorder
       border-radius: 50%
-      height: $font-size-sm + $m-base
-      width: $font-size-sm + $m-base
+      height: $m-lg
+      margin: 0 $m-base
+      width: $m-lg
