@@ -1,0 +1,16 @@
+body
+  background-color: $gray-light
+  font-family: "Open Sans", sans-serif
+  font-size: $font-size-base
+
+.top-container
+  background-image:  url('../assets/background-mobile.jpg')
+  background-repeat: no-repeat
+  background-size: 100vw
+  @media (min-width: $min-width)
+    background-image: linear-gradient(rgba($white,0) 50%, $gray-light-transparent-50 80%, $gray-light 100%), url('../assets/background.png')
+
+.main-container
+  padding: $m-sm
+  @media (min-width: $min-width)
+    padding: $m-lg

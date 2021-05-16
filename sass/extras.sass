@@ -1,0 +1,32 @@
+.title
+  font-size: $font-size-lg
+
+  &:before
+    background-color: $secondary
+    border-radius: $border-radius-sm
+    border: $border-base solid $secondary
+    content: ''
+    display: block
+    height: $m-xs
+    margin: $m-2xl auto $m-base auto
+    width: 15%
+
+.title.-line-left
+  &:before
+    margin-left: 0
+
+.subtitle
+  color: $gray
+  font-size: $font-size-xs
+  font-weight: lighter
+
+@media(min-width: $min-width)
+  .title
+    font-size: $font-size-2xl
+
+  .subtitle
+    font-size: $font-size-lg
+    line-height: $line-height-lg
+
+  .header-line
+    height: $m-xs

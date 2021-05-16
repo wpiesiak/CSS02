@@ -1,0 +1,208 @@
+.fly-with-us
+  +mainSection
+  color: $white
+
+  &__header
+    font-size: $font-size-2xl
+
+  &__content-title
+    border-bottom: $border-base solid $gray-light-transparent-50
+    font-weight: normal
+    font-size: $font-size-xs
+    line-height: $line-height-base
+    margin: $m-base 0
+    text-transform: uppercase
+
+  &__underline
+    display: inline-block
+    &:after
+      background-color: $white
+      bottom: -$m-3xs
+      content: ''
+      display: block
+      height: $m-3xs
+      position: relative
+      width: 100%
+
+  &__subtitle
+    font-size: $font-size-base
+    line-height: $line-height-base
+
+  &__info
+    border-left: $border-base solid $white
+    font-size: $font-size-sm
+    font-weight: lighter
+    padding: $m-xxs $m-base
+
+.tabs
+  display: none
+
+.button-confirm
+  align-items: center
+  background-color: $primary
+  border: none
+  color: $white
+  display: flex
+  font-size: $font-size-sm
+  margin: $m-sm 0
+  padding: 0
+
+  &__text
+    padding: $m-xs $m-sm
+
+  &__icon
+    background-color: $white
+    padding: $m-xs
+
+  &__arrow
+    fill: $secondary
+
+.flight-search
+  align-items: stretch
+  color: $gray
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  margin: $m-xl 0
+  width: 100%
+
+  &__plane
+    display: none
+
+  &__element
+    align-items: baseline
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+  &__element.-field
+    background-color: $white
+    flex: 1 0 50%
+    height: $flight-search-container-height
+    margin-bottom: $m-sm
+    position: relative
+
+  &__element.-button
+    align-items: center
+    background-color: $secondary
+    border: none
+    color: $white
+    flex: 1 0 20%
+    font-size: $font-size-sm
+    font-weight: bold
+    min-height: $m-lg
+
+  &__label
+    color: $gray
+    display: block
+    font-size: $font-size-xs
+    font-weight: $font-weight-light
+    margin-left: $m-xs
+
+  &__select
+    appearance: none
+    background-color: transparent
+    border: none
+    display: block
+    font-size: $font-size-sm
+    font-weight: $font-weight-bold
+    padding: $m-xs $m-base $m-xs $m-xs
+
+@media (min-width: $min-width)
+
+  .fly-with-us
+    &__header
+      font-size: $font-size-2xl*3
+      line-height: $line-height-base
+      margin-top: -$m-base
+
+    &__content-title
+      font-size: $font-size-base
+      line-height: $line-height-lg
+
+    &__subtitle
+      font-size: $font-size-xl
+
+    &__info
+      font-size: $font-size-base
+      padding: 0 $m-base
+
+  .tabs
+    display: flex
+    justify-content: flex-end
+    margin-top: -$m-base
+
+  .tab
+    backdrop-filter: blur($m-xxs)
+    background-color: rgba($white, .15)
+    cursor: pointer
+    margin: 0 $m-3xs
+    padding: $m-sm
+    text-align: center
+    color: $gray
+    font-size: $font-size-lg
+
+    &__input
+      display: none
+
+    &:after
+      content: ''
+      background-color: $gray
+      display: block
+      border-radius: 50%
+      height: $m-xs
+      width: $m-xs
+      margin: $m-lg auto 0 auto
+
+    &:hover, &__input:checked + .tab
+      color: $black
+      &:after
+        background-color: $secondary
+        filter: $base-shadow
+
+  .flight-search
+    flex-wrap: nowrap
+    margin: $m-2xl*1.5 0 $m-xl 0
+
+    &__element.-button
+      flex: 1
+      height: $flight-search-container-height
+      font-size: $font-size-lg
+
+    &__element.-field
+      flex: 2
+
+    &__select-wrapper
+      display: flex
+      flex-direction: column
+      margin: auto
+
+    &__select
+      font-size: $font-size-base
+
+    &__label
+      font-size: $font-size-sm
+
+    &__plane
+      align-items: center
+      background-color: $gray-light-transparent-80
+      display: flex
+      height: $flight-search-container-height
+      justify-content: center
+      width: $flight-search-container-height
+
+    &__plane-icon
+      fill: $gray
+      height: $font-size-2xl
+      transform: rotate(-45deg)
+      width: $font-size-2xl
+
+  .button-confirm
+    font-size: $font-size-base
+    margin-top: $m-lg
+
+    &__text
+      padding: $m-base $m-lg
+
+    &__icon
+      padding: $m-base

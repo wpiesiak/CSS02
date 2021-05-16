@@ -1,0 +1,54 @@
+.header
+  color: $white
+  display: flex
+  justify-content: space-between
+
+.company, .topnav
+  align-items: center
+  display: flex
+  justify-content: space-between
+
+.topnav
+  &__avatar, &__button, &__link
+    display: none
+
+  &__menu-icon
+    fill: $white
+
+.company__logo
+  height: $font-size-lg
+
+@media(min-width: $min-width)
+  .company
+    display: flex
+    align-items: center
+
+    &__logo
+      height: $font-size-2xl
+
+    &__name
+      font-size: $font-size-lg
+
+  .topnav
+    font-size: $font-size-base
+    font-weight: 700
+
+    &__link
+      color: $white
+      margin: 0 $m-base
+      text-decoration: none
+
+    &__button
+      +transparentBorder
+      border-radius: $border-radius-sm
+      color: $white
+      margin: 0 $m-base
+      text-decoration: none
+      padding: $m-xs $m-lg
+
+    &__avatar
+      +transparentBorder
+      border-radius: 50%
+      height: $m-lg
+      margin: 0 $m-base
+      width: $m-lg

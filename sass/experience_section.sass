@@ -1,0 +1,125 @@
+.experience
+  +mainSection
+  display: flex
+  flex-direction: column
+
+  &__content
+    padding-right: $m-base
+
+  &__subtitle
+    border-bottom: $border-xs solid $gray
+    padding-bottom: $m-base
+
+  &__footer
+    align-items: center
+    color: $gray
+    display: flex
+    font-size: $font-size-sm
+    font-weight: $font-weight-light
+
+  &__play-icon
+    display: inline-block
+    fill: $secondary
+    height: $font-size-xl
+    margin-right: $m-sm
+    width: $font-size-xl
+
+.card
+  background-color: $white
+  box-shadow: $shadow $gray
+  margin: $m-base 0
+
+  &__image-wrapper
+    position: relative
+
+    &:after
+      background: $secondary
+      content: ''
+      height: 100%
+      left: 0
+      opacity: 0
+      position: absolute
+      top: 0
+      transition: .5s ease
+      width: 100%
+
+  &:hover
+    box-shadow: $shadow $secondary
+    .card__image-wrapper:after
+      opacity: 0.5
+
+  &:hover &__extra-content
+    bottom: 0
+    color: $white
+    display: block
+    font-size: $font-size-base
+    padding: $m-base
+    position: absolute
+
+.card
+  position: relative
+
+  &__extra-content
+    display: none
+
+    .icon
+      height: $font-size-xl
+      fill: $white
+      width: $font-size-xl
+
+  &__image
+    display: block
+    height: $m-base*6
+    object-fit: cover
+    width: 100%
+
+  &__footer
+    padding: $m-sm $m-base
+
+  &__label
+    +cardFooterElement
+    border-bottom: $border-sm solid $gray
+    color: $gray
+    display: inline-block
+    font-size: $font-size-xxs
+    letter-spacing: $m-xxs
+    text-transform: uppercase
+
+  &__title
+    +cardFooterElement
+    font-size: $font-size-base
+    font-weight: 700
+
+@media (min-width: $min-width)
+  .experience
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+
+    &__content
+      padding-right: $m-lg
+
+    &__subtitle
+      padding-right: $m-lg
+
+    &__column
+      width: 33%
+
+    &__footer
+      font-size: $font-size-base
+
+      .icon--play
+        height: $m-lg
+        width: $m-lg
+
+  .card
+    &__image
+      height: auto
+
+    &.-economy
+      left: $m-base
+      position: relative
+      top: $m-xl
+
+    &__label
+      font-size: $font-size-xs

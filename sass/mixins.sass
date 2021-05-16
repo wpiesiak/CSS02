@@ -1,0 +1,11 @@
+
+@mixin transparentBorder
+  border: $border-sm solid $gray-light-transparent-30
+
+@mixin mainSection
+  padding: $m-xs
+  @media (min-width: $min-width)
+    padding: $m-lg
+
+@mixin cardFooterElement
+  padding: $m-sm 0

@@ -1,0 +1,81 @@
+.journey
+  +mainSection
+
+  &__header
+    text-align: center
+
+  &__services
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+
+.journey-element
+  align-self: center
+  justify-self: center
+  margin: $m-base
+
+  &__title
+    font-size: $font-size-xs
+    font-weight: normal
+    margin: $m-base auto
+    text-align: center
+
+  &__circle
+    align-items: center
+    background-color: $white
+    border-radius: 50%
+    border: 0 solid $white
+    box-shadow: $shadow $gray
+    color: $secondary
+    display: flex
+    height: $icon-lg
+    justify-content: center
+    margin: 0 auto
+    position: relative
+    width: $icon-lg
+
+    &:hover
+      background-color: $secondary
+      box-shadow: $shadow-lg $secondary
+      color: $white
+
+      .journey-element__icon
+        path
+          fill: $white
+
+      &:after
+        border-radius: 50%
+        border: $border-base solid $white
+        content: ''
+        display: block
+        height: $icon-lg * 1.5
+        position: absolute
+        width: $icon-lg * 1.5
+
+  &__icon
+    path
+      fill: $secondary
+
+
+
+@media (min-width: $min-width)
+  .journey
+    &__header
+      margin: auto
+      text-align: center
+      width: 60%
+
+    &__services
+      grid-template-columns: repeat(3, 1fr)
+
+  .journey-element
+    &__title
+      font-size: $font-size-sm
+
+    &__circle
+      height: $icon-xl
+      width: $icon-xl
+
+      &:hover
+        &:after
+          height: $m-xl * 2
+          width: $m-xl * 2
