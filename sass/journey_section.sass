@@ -1,3 +1,11 @@
+@keyframes rotate-icon
+  0%
+    transform: scale(1) rotate(0deg)
+  50%
+    transform: scale(1.5) rotate(360deg)
+  100%
+    transform: scale(1) rotate(720deg)
+
 .journey
   +mainSection
 
@@ -39,6 +47,8 @@
       color: $white
 
       .journey-element__icon
+        animation: rotate-icon 1s linear infinite
+
         path
           fill: $white
 
@@ -54,8 +64,6 @@
   &__icon
     path
       fill: $secondary
-
-
 
 @media (min-width: $min-width)
   .journey
